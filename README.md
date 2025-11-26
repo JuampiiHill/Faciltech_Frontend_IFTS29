@@ -48,14 +48,12 @@ Funcionalidades principales
 
 1. Clonar el repositorio:
 
-git clone https://github.com/MariaJulietaMolina/ecommerce-electrodomesticos.git  
-cd ecommerce-electrodomesticos
+git clone https://github.com/JuampiiHill/Faciltech_Frontend_IFTS29
+cd Facilitech_Grupo5_IFTS29_Frontend
 
 2. Instalar dependencias:
 
 npm install --legacy-peer-deps
-
-> ⚠ Importante: Se usa React 18
 
 3. Ejecutar localmente:
 
@@ -65,7 +63,7 @@ npm run dev
 
 # Despliegue
 
-El proyecto está desplegado en [Vercel] (URL final confirmada).
+El proyecto está desplegado en [Vercel] https://faciltech-frontend-ifts-29.vercel.app/ (URL final confirmada).
 
 
 
