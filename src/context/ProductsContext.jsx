@@ -1,6 +1,10 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 export const ProductsContext = createContext();
+
+export const useProductsContext = () => {
+  return useContext(ProductsContext);
+};
 
 export const ProductsProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
@@ -8,9 +12,11 @@ export const ProductsProvider = ({ children }) => {
   const [busqueda, setBusqueda] = useState("");
   const [loading, setLoading] = useState(true);
 
+  const API_URL = "https://fakestoreapi.com/products";
+
   const obtenerProductos = async () => {
     try {
-      const res = await fetch("https://687c5fc4b4bc7cfbda88de39.mockapi.io/api/v1/productos");
+      const res = await fetch(API_URL);
       const data = await res.json();
       setProductos(data);
       setProductosFiltrados(data);

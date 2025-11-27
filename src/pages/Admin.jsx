@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ProductsContext } from "../context/ProductsContext";
 import { FaEdit, FaTrashAlt, FaPlus } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
 import { Pagination } from "react-bootstrap";
 
 const Admin = () => {
@@ -27,13 +26,11 @@ const Admin = () => {
 
   return (
     <div className="container mt-4">
-      <Helmet>
         <title>Admin | Gestión de Productos</title>
         <meta
           name="description"
           content="Panel de administración para agregar, editar o eliminar productos."
         />
-      </Helmet>
 
       <h2 className="mb-4">Área protegida - Gestión de Productos</h2>
 
