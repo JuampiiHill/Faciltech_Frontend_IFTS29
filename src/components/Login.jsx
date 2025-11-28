@@ -31,7 +31,7 @@ function Login({ onClose }) {
         <label>Contraseña</label>
         <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
       </div>
-      <button className="btn btn-primary w-100" type="submit">Ingresar</button>
+      <button className="btn btn-primary w-100" type="submit" onClick={handleSubmit}>Ingresar</button>
     </form>
   );
 }

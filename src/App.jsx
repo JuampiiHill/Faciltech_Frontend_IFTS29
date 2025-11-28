@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import { useAuthContext } from "./context/AuthContext";
 import { useProductsContext } from "./context/ProductsContext";
-
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./components/Cart";
@@ -14,7 +13,6 @@ import FormularioProducto from "./components/FormularioProducto";
 
 function App() {
   const [carrito, setCarrito] = useState([]);
-  const { user } = useAuthContext();
   const { agregarProducto } = useProductsContext();  // ← ACÁ ADENTRO
 
   const eliminarDelCarrito = (id) => {
@@ -27,10 +25,13 @@ function App() {
   };
 
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route
-          index
+    <>
+      <ToastContainer />
+
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route
+            index
           element={
             <Home agregarAlCarrito={(item) => setCarrito([...carrito, item])} />
           }
@@ -75,6 +76,7 @@ function App() {
         />
       </Route>
     </Routes>
+    </>
   );
 }
 
