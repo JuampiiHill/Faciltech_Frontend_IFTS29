@@ -87,12 +87,16 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item dropdown my-2 my-lg-0 ms-lg-3">
+              
+              {/*//////////////////
+                  POR HACER (filrado por categorias)
+               ///////////////////   
               <button
                 className="btn btn-secondary dropdown-toggle w-100"
                 data-bs-toggle="dropdown"
               >
                 Categorías
-              </button>
+              </button> */}
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">

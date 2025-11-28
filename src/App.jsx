@@ -24,23 +24,25 @@ function App() {
     }
   };
 
+  const agregarAlCarrito = (item) => {
+    setCarrito((prev) => [...prev, item]);
+  };
+
   return (
     <>
-      <ToastContainer />
-
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route
             index
           element={
-            <Home agregarAlCarrito={(item) => setCarrito([...carrito, item])} />
+            <Home agregarAlCarrito={agregarAlCarrito} />
           }
         />
         <Route
           path="/product/:id"
           element={
             <ProductDetail
-              agregarAlCarrito={(item) => setCarrito([...carrito, item])}
+              agregarAlCarrito={agregarAlCarrito}
             />
           }
         />

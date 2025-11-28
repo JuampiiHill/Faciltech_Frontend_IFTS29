@@ -6,7 +6,6 @@ const ProductCard = ({ producto, agregarAlCarrito }) => {
 
   const agregar = () => {
     agregarAlCarrito(producto);
-
     toast.success("Producto añadido exitosamente", {
       position: "top-right",
       autoClose: 2000,
@@ -38,7 +37,11 @@ const ProductCard = ({ producto, agregarAlCarrito }) => {
 
             <button 
               className="btn btn-success btn-sm"
-              onClick={agregar}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                agregar();
+              }}
             >
               Agregar al carrito
             </button>

@@ -7,6 +7,7 @@ import { HashRouter } from 'react-router-dom';
 import './styles.css';
 import { AuthProvider } from './context/AuthContext';
 import { ProductsProvider } from './context/ProductsContext';
+import "react-toastify/dist/ReactToastify.css";
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
